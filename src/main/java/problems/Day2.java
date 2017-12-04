@@ -2,7 +2,6 @@ package problems;
 
 import util.InputUtil;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
@@ -27,7 +26,7 @@ public class Day2 {
     public static void main(String[] args) {
         Day2 day2 = new Day2();
         InputUtil inputUtil = new InputUtil();
-        String inputPath = day2.getClass().getResource(File.separator + "Day2Input.txt").getFile();
+        String inputPath = day2.getClass().getResource("/Day2Input.txt").getFile();
         try {
             List<List<Integer>> spreadsheet = inputUtil.readMatrix(inputPath);
             System.out.println(day2.calculateChecksum(spreadsheet));
