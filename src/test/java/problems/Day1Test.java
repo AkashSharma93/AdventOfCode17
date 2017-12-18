@@ -1,7 +1,8 @@
+package problems;
+
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import problems.Day1;
 
 /**
  * Created by akash on 03/12/17.
@@ -34,4 +35,28 @@ public class Day1Test {
         Assert.assertEquals(day1.parseCaptcha("91212129"), 9);
     }
 
+    @Test
+    public void p2Test1() {
+        Assert.assertEquals(day1.parseCaptchaPart2("1212"), 6);
+    }
+
+    @Test
+    public void p2Test2() {
+        Assert.assertEquals(day1.parseCaptchaPart2("1221"), 0);
+    }
+
+    @Test
+    public void p2Test3() {
+        Assert.assertEquals(day1.parseCaptchaPart2("123425"), 4);
+    }
+
+    @Test
+    public void p2Test4() {
+        Assert.assertEquals(day1.parseCaptchaPart2("123123"), 12);
+    }
+
+    @Test
+    public void p2Test5() {
+        Assert.assertEquals(day1.parseCaptchaPart2("12131415"), 4);
+    }
 }
