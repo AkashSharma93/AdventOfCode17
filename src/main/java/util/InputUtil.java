@@ -36,4 +36,15 @@ public class InputUtil {
         reader.close();
         return matrix;
     }
+
+    public List<String> getInputLines(String filePath) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath)));
+        List<String> inputLines = new ArrayList<>();
+        String line = "";
+        while ((line = reader.readLine()) != null) {
+            inputLines.add(line);
+        }
+        reader.close();
+        return inputLines;
+    }
  }
